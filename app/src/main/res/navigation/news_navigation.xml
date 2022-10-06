@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/news_navigation"
+    app:startDestination="@+id/live_news_fragment">
+
+    <fragment
+        android:id="@+id/live_news_fragment"
+        android:name="com.yedebkid.newsapp.view.LiveNewsFragment"
+        android:label="Live News"
+        tools:layout="@layout/fragment_live_news" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/historic_news_fragment"
+        android:name="com.yedebkid.newsapp.view.HistoricNewsFragment"
+        android:label="Historic News"
+        tools:layout="@layout/fragment_historic_news" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/news_source_fragment"
+        android:name="com.yedebkid.newsapp.view.NewsSourceFragment"
+        android:label="News Source"
+        tools:layout="@layout/fragment_news_source">
+
+    </fragment>
+</navigation>
