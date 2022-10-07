@@ -6,7 +6,8 @@ data class NewsDomainData(
     val title: String,
     val description: String,
     val image: String,
-    val date: String
+    val date: String,
+    val url : String
 )
 
 fun List<Data?>?.mapToNewsDomainData(): List<NewsDomainData?>? =
@@ -16,6 +17,7 @@ fun List<Data?>?.mapToNewsDomainData(): List<NewsDomainData?>? =
             description = it?.description ?: "",
             image = it?.image ?: "",
             date = it?.publishedAt ?: "",
+            url = it?.url ?: ""
         )
     }
 

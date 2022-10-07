@@ -6,30 +6,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="10dp"
     android:elevation="15dp"
-    android:layout_margin="5dp">
+    android:layout_margin="10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:padding="5dp">
 
         <TextView
             android:id="@+id/news_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="4dp"
             android:text="Title"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.099"
+            app:layout_constraintHorizontal_bias="0.074"
             app:layout_constraintStart_toEndOf="@+id/news_Image"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/news_Image"
-            android:layout_width="151dp"
-            android:layout_height="163dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="128dp"
+            android:layout_height="115dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,23 +36,37 @@
             android:id="@+id/news_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="56dp"
             android:text="Description"
+            android:layout_margin="5dp"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.129"
-            app:layout_constraintStart_toEndOf="@+id/news_Image" />
+            app:layout_constraintHorizontal_bias="0.033"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/news_Image"
+            app:layout_constraintVertical_bias="0.8" />
 
         <TextView
             android:id="@+id/news_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
             android:text="Date"
             android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/news_Image"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.095"
+            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintStart_toEndOf="@+id/news_Image"
+            app:layout_constraintTop_toBottomOf="@+id/news_url" />
+
+        <TextView
+            android:id="@+id/news_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="URL"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.078"
             app:layout_constraintStart_toEndOf="@+id/news_Image"
             app:layout_constraintTop_toBottomOf="@+id/news_title" />
 
