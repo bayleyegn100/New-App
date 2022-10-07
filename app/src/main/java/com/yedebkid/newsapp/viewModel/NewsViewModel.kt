@@ -9,13 +9,15 @@ import com.yedebkid.newsapp.rest.NewsRepository
 import com.yedebkid.newsapp.util.UIState
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class NewsViewModel(
+class NewsViewModel @Inject constructor(
     private val newsRepository: NewsRepository,
     private val ioDispatcher: CoroutineDispatcher
 ): ViewModel() {
-
+   // To be used for click details of the news
     var newsDomainData: NewsDomainData? = null
+
     private val _liveNews: MutableLiveData<UIState> = MutableLiveData(UIState.LOADING)
     val liveNews:LiveData<UIState> get() = _liveNews
 

@@ -4,6 +4,7 @@
     package="com.yedebkid.newsapp" >
 
     <application
+        android:name=".depinjection.NewsApi"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
