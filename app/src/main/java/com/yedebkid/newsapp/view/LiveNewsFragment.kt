@@ -16,7 +16,11 @@ import com.yedebkid.newsapp.model.domain.NewsDomainData
 import com.yedebkid.newsapp.util.BaseFragment
 import com.yedebkid.newsapp.util.ClicksHandler
 import com.yedebkid.newsapp.util.UIState
+import com.yedebkid.newsapp.viewModel.NewsViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class LiveNewsFragment : BaseFragment() {
 
     private val binding by lazy {

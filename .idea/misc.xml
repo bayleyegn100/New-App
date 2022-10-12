@@ -11,6 +11,7 @@
         <entry key="app/src/main/res/layout/fragment_news_source.xml" value="0.3234375" />
         <entry key="app/src/main/res/layout/news_view.xml" value="0.375" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/xml/network_security_config.xml" value="0.35885416666666664" />
       </map>
     </option>
   </component>

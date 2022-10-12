@@ -13,8 +13,22 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
+    private val binding by lazy {
+        ActivityMainBinding.inflate(layoutInflater)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
+
+//        val navController = findNavController((R.id.news_frag_container))
+//
+//        val appBarConfiguration = AppBarConfiguration(
+//            setOf(
+//                R.id.news_source_fragment, R.id.live_news_fragment, R.id.historic_news_fragment
+//            )
+//        )
+//        setupActionBarWithNavController(navController, appBarConfiguration)
+//        binding.bottomNavigationView.setupWithNavController(navController)
     }
 }

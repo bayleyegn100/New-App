@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class NewsData(
     @SerializedName("data")
-    val `data`: List<Data?>?,
+    val data: List<Data?>?,
     @SerializedName("pagination")
     val pagination: Pagination?
 )

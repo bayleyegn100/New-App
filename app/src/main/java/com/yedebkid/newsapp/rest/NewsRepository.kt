@@ -1,5 +1,6 @@
 package com.yedebkid.newsapp.rest
 
+import android.util.Log
 import com.yedebkid.newsapp.model.domain.mapToNewsDomainData
 import com.yedebkid.newsapp.util.FailureResponseException
 import com.yedebkid.newsapp.util.NullResponseException
@@ -10,11 +11,11 @@ import kotlinx.coroutines.flow.flow
 import java.lang.Exception
 import javax.inject.Inject
 
+private const val TAG = "NewsRepository"
 interface NewsRepository {
 
     fun getAllLiveNews(): Flow<UIState>
 }
-
 class NewsRepositoryImplementation @Inject constructor(
     private val newsApi: NewsApi
 ): NewsRepository {
@@ -26,7 +27,8 @@ class NewsRepositoryImplementation @Inject constructor(
             val response = newsApi.getLiveNews()
             if (response.isSuccessful){
                  response.body()?.let {
-                     emit(UIState.SUCCESS(it.data.mapToNewsDomainData()))
+                     Log.d(TAG, "getAllLiveNews: Live news generated")
+                     emit(UIState.SUCCESS(it.mapToNewsDomainData()))
                  } ?: throw NullResponseException("Response is Null.")
             } else {
                 throw FailureResponseException(response.errorBody().toString())
