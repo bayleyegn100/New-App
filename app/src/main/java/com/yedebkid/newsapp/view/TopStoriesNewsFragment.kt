@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.yedebkid.newsapp.R
 import com.yedebkid.newsapp.adapter.NewsAdapter
@@ -25,10 +26,16 @@ class TopStoriesNewsFragment : BaseFragment() {
     private val newsAdapter by lazy {
         NewsAdapter {
             when(it){
-                is ClicksHandler.NewsImageClicker -> {
+                is ClicksHandler.NewsUrlClicker -> {
                     Uri.parse(it.url).also {
                         startActivity(Intent(Intent.ACTION_VIEW, it))
                     }
+                }
+                is ClicksHandler.NewsDetailsClick -> {
+                    newsViewModel.newsItemDomainData = it.news
+                    findNavController().navigate(
+                        R.id.action_live_news_fragment_to_detailsFragment
+                    )
                 }
             }
         }
