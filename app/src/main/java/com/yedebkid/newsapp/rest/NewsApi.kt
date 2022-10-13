@@ -1,26 +1,31 @@
 package com.yedebkid.newsapp.rest
 
-import com.yedebkid.newsapp.model.Data
-import com.yedebkid.newsapp.model.NewsData
+import com.yedebkid.newsapp.model.DataX
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface NewsApi {
 
-    @GET(LIVE_NEWS)
-    suspend fun getLiveNews(
-        @Query("access_key") accesskey: String = ACCESS_KEY,
-        @Query("sources") language: String = LANGUAGE
-    ): Response<List<Data>>
+    @GET(ALL_NEWS)
+    suspend fun getAllNews(
+        @Query("api_token") accesskey: String = ACCESS_KEY,
+        @Query("language") language: String = LANGUAGE,
+        @Query("limit") limit: Int = LIMIT
+    ): Response<List<DataX>>
 
-        //"http://api.mediastack.com/v1/news?access_key=bdc64517773bbe5465f6e6a8c462148b&sources=en"
+    /**
+     * Top Stories: https://api.thenewsapi.com/v1/news/top?api_token=7KpjzdkqpoavUd2jXc72kCP2OCREnDyDOb1kcL8F&locale=us&limit=3
+        All news: https://api.thenewsapi.com/v1/news/all?api_token=7KpjzdkqpoavUd2jXc72kCP2OCREnDyDOb1kcL8F&language=en&limit=3
+     */
     companion object {
 
-        const val BASE_URL = "http://api.mediastack.com/v1/"
-        private const val ACCESS_KEY = "bdc64517773bbe5465f6e6a8c462148b"
-        private const val LIVE_NEWS = "news"
+        const val BASE_URL = "https://api.thenewsapi.com/v1/news/"
+        private const val ACCESS_KEY = "7KpjzdkqpoavUd2jXc72kCP2OCREnDyDOb1kcL8F"
+        private const val TOP_STORIES = "top"
+        private const val ALL_NEWS = "all"
         private const val LANGUAGE = "en"
+        private const val LIMIT = 5
 
     }
 }

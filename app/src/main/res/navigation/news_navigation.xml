@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/live_news_fragment"
-        android:name="com.yedebkid.newsapp.view.LiveNewsFragment"
+        android:name="com.yedebkid.newsapp.view.AllNewsFragment"
         android:label="Live News"
-        tools:layout="@layout/fragment_live_news" >
+        tools:layout="@layout/fragment_all_news" >
     </fragment>
 
     <fragment

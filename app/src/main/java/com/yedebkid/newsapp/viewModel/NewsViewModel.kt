@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.yedebkid.newsapp.model.domain.NewsDomainData
+import com.yedebkid.newsapp.model.domain.NewsItemDomain
 import com.yedebkid.newsapp.rest.NewsRepository
 import com.yedebkid.newsapp.util.UIState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -20,10 +20,10 @@ class NewsViewModel @Inject constructor(
     private val ioDispatcher: CoroutineDispatcher
 ): ViewModel() {
    // To be used for click details of the news
-    var newsDomainData: NewsDomainData? = null
+    var newsItemDomainData: NewsItemDomain? = null
 
-    private val _liveNews: MutableLiveData<UIState> = MutableLiveData(UIState.LOADING)
-    val liveNews:LiveData<UIState> get() = _liveNews
+    private val _allNews: MutableLiveData<UIState> = MutableLiveData(UIState.LOADING)
+    val allNews:LiveData<UIState> get() = _allNews
 
     init {
         getLiveNewsOnly()
@@ -31,9 +31,9 @@ class NewsViewModel @Inject constructor(
 
     private fun getLiveNewsOnly() {
         viewModelScope.launch(ioDispatcher){
-            newsRepository.getAllLiveNews().collect() {
-                _liveNews.postValue(it)
-                Log.d(TAG, "getLiveNewsOnly: Live news from repo: $_liveNews")
+            newsRepository.getAllLNewsHere().collect() {
+                _allNews.postValue(it)
+                Log.d(TAG, "getLiveNewsOnly: Live news from repo: $_allNews")
 
             }
         }

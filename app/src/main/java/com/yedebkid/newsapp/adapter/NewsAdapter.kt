@@ -6,16 +6,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import com.yedebkid.newsapp.R
 import com.yedebkid.newsapp.databinding.NewsViewBinding
-import com.yedebkid.newsapp.model.domain.NewsDomainData
+import com.yedebkid.newsapp.model.domain.NewsItemDomain
 import com.yedebkid.newsapp.util.ClicksHandler
 
 class NewsAdapter(
-    private val dataSet: MutableList<NewsDomainData> = mutableListOf(),
+    private val dataSet: MutableList<NewsItemDomain> = mutableListOf(),
     private val clickHandler: (ClicksHandler) -> Unit
 
 ) : RecyclerView.Adapter<NewsViewHolder>() {
 
-    fun updateNews(newNews: List<NewsDomainData>) {
+    fun updateNews(newNews: List<NewsItemDomain>) {
         dataSet.clear()
         dataSet.addAll(newNews)
         notifyDataSetChanged()
@@ -40,7 +40,7 @@ class NewsAdapter(
 class NewsViewHolder(
     private val binding: NewsViewBinding
 ) : RecyclerView.ViewHolder(binding.root) {
-    fun bind(news: NewsDomainData, onClickHandler: (ClicksHandler) -> Unit) {
+    fun bind(news: NewsItemDomain, onClickHandler: (ClicksHandler) -> Unit) {
         binding.newsTitle.text = news.title
         binding.newsDate.text = news.date
         binding.newsDescription.text = news.description

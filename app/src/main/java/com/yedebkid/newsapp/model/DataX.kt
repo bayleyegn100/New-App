@@ -3,25 +3,29 @@ package com.yedebkid.newsapp.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Data(
-    @SerializedName("author")
-    val author: Any?,
-    @SerializedName("category")
-    val category: String?,
-    @SerializedName("country")
-    val country: String?,
+data class DataX(
+    @SerializedName("categories")
+    val categories: List<String?>?,
     @SerializedName("description")
     val description: String?,
-    @SerializedName("image")
-    val image: String?,
+    @SerializedName("image_url")
+    val imageUrl: String?,
+    @SerializedName("keywords")
+    val keywords: String?,
     @SerializedName("language")
     val language: String?,
     @SerializedName("published_at")
     val publishedAt: String?,
+    @SerializedName("relevance_score")
+    val relevanceScore: Any?,
+    @SerializedName("snippet")
+    val snippet: String?,
     @SerializedName("source")
     val source: String?,
     @SerializedName("title")
     val title: String?,
     @SerializedName("url")
-    val url: String?
+    val url: String?,
+    @SerializedName("uuid")
+    val uuid: String?
 )
