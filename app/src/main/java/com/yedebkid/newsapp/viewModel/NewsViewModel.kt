@@ -10,6 +10,7 @@ import com.yedebkid.newsapp.rest.NewsRepository
 import com.yedebkid.newsapp.util.UIState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -33,8 +34,16 @@ class NewsViewModel @Inject constructor(
         viewModelScope.launch(ioDispatcher){
             newsRepository.getAllLNewsHere().collect() {
                 _allNews.postValue(it)
-                Log.d(TAG, "getLiveNewsOnly: Live news from repo: $_allNews")
 
+            }
+        }
+    }
+    private val _topStoriesNews: MutableLiveData<UIState> = MutableLiveData(UIState.LOADING)
+    val topStoriesNews:LiveData<UIState> get() = _topStoriesNews
+    private  fun getTopStoryNewsONly(){
+        viewModelScope.launch(ioDispatcher) {
+            newsRepository.getTopStoriesNewsHere().collect(){
+                _topStoriesNews.postValue(it)
             }
         }
     }

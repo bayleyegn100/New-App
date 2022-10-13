@@ -13,17 +13,10 @@
     </fragment>
 
     <fragment
-        android:id="@+id/historic_news_fragment"
-        android:name="com.yedebkid.newsapp.view.HistoricNewsFragment"
+        android:id="@+id/TopStories_news_fragment"
+        android:name="com.yedebkid.newsapp.view.TopStoriesNewsFragment"
         android:label="Historic News"
-        tools:layout="@layout/fragment_historic_news" >
+        tools:layout="@layout/fragment_top_stories_news" >
     </fragment>
 
-    <fragment
-        android:id="@+id/news_source_fragment"
-        android:name="com.yedebkid.newsapp.view.NewsSourceFragment"
-        android:label="News Source"
-        tools:layout="@layout/fragment_news_source">
-
-    </fragment>
 </navigation>

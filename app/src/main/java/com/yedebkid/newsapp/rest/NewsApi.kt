@@ -14,6 +14,13 @@ interface NewsApi {
         @Query("limit") limit: Int = LIMIT
     ): Response<List<DataX>>
 
+    @GET(TOP_STORIES)
+    suspend fun getTopStoriesNews(
+        @Query("api_token") accesskey: String = ACCESS_KEY,
+        @Query("language") language: String = LANGUAGE,
+        @Query("limit") limit: Int = LIMIT
+    ): Response<List<DataX>>
+
     /**
      * Top Stories: https://api.thenewsapi.com/v1/news/top?api_token=7KpjzdkqpoavUd2jXc72kCP2OCREnDyDOb1kcL8F&locale=us&limit=3
         All news: https://api.thenewsapi.com/v1/news/all?api_token=7KpjzdkqpoavUd2jXc72kCP2OCREnDyDOb1kcL8F&language=en&limit=3
