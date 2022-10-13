@@ -1,4 +1,4 @@
-package com.yedebkid.newsapp.model.domain
+package com.yedebkid.newsapp.model
 
 
 import com.google.gson.annotations.SerializedName

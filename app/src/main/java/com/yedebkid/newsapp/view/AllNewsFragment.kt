@@ -57,8 +57,8 @@ class AllNewsFragment : BaseFragment() {
                 is UIState.SUCCESS<*> -> {
                     binding.livenewsRecyclerview.visibility = View.VISIBLE
                     binding.newsLoadingSpinner.visibility = View.GONE
-                    val newNews = it.data as List<NewsItemDomain>
-                    newsAdapter.updateNews(newNews)
+                    val allNews = it.data as List<NewsItemDomain>
+                    newsAdapter.updateNews(allNews)
                 }
                 is UIState.ERROR -> {
                     binding.livenewsRecyclerview.visibility = View.GONE

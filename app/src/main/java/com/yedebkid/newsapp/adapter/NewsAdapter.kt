@@ -43,13 +43,13 @@ class NewsViewHolder(
     fun bind(news: NewsItemDomain, onClickHandler: (ClicksHandler) -> Unit) {
         binding.newsTitle.text = news.title
         binding.newsDate.text = news.date
-        binding.newsDescription.text = news.description
-        binding.newsUrl.apply {
-            text = news.url
-            setOnClickListener {
-                onClickHandler(ClicksHandler.NewsImageClicker(news.url))
-            }
-        }
+//        binding.newsDescription.text = news.description
+//        binding.newsUrl.apply {
+//            text = news.url
+//            setOnClickListener {
+//                onClickHandler(ClicksHandler.NewsImageClicker(news.url))
+//            }
+//        }
 
         Picasso.get()
             .load(news.image)

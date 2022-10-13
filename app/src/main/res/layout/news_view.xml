@@ -15,60 +15,65 @@
 
         <TextView
             android:id="@+id/news_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_width="221dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
             android:text="Title"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.074"
+            app:layout_constraintHorizontal_bias="0.252"
             app:layout_constraintStart_toEndOf="@+id/news_Image"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/news_Image"
-            android:layout_width="128dp"
-            android:layout_height="115dp"
+            android:layout_width="148dp"
+            android:layout_height="103dp"
+            android:layout_marginBottom="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/news_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Description"
-            android:layout_margin="5dp"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.033"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/news_Image"
-            app:layout_constraintVertical_bias="0.8" />
+<!--        <TextView-->
+<!--            android:id="@+id/news_description"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Description"-->
+<!--            android:layout_margin="5dp"-->
+<!--            android:textSize="20sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.033"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/news_Image"-->
+<!--            app:layout_constraintVertical_bias="0.8" />-->
 
         <TextView
             android:id="@+id/news_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Date"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/news_Image"
+            android:textColor="@color/teal_200"
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.08"
-            app:layout_constraintStart_toEndOf="@+id/news_Image"
-            app:layout_constraintTop_toBottomOf="@+id/news_url" />
+            app:layout_constraintHorizontal_bias="0.148"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/news_Image" />
 
-        <TextView
-            android:id="@+id/news_url"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="URL"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.078"
-            app:layout_constraintStart_toEndOf="@+id/news_Image"
-            app:layout_constraintTop_toBottomOf="@+id/news_title" />
+        <!--        <TextView-->
+<!--            android:id="@+id/news_url"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:text="URL"-->
+<!--            android:textSize="20sp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.078"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/news_Image"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/news_title" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

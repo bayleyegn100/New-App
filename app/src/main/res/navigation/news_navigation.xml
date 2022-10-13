@@ -15,7 +15,7 @@
     <fragment
         android:id="@+id/TopStories_news_fragment"
         android:name="com.yedebkid.newsapp.view.TopStoriesNewsFragment"
-        android:label="Historic News"
+        android:label="Top Story News"
         tools:layout="@layout/fragment_top_stories_news" >
     </fragment>
 

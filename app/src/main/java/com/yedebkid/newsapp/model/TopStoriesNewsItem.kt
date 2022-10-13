@@ -1,7 +1,9 @@
-package com.yedebkid.newsapp.model.domain
+package com.yedebkid.newsapp.model
 
 
 import com.google.gson.annotations.SerializedName
+import com.yedebkid.newsapp.model.Data
+import com.yedebkid.newsapp.model.Meta
 
 data class TopStoriesNewsItem(
     @SerializedName("data")

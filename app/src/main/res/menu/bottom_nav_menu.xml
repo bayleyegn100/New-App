@@ -4,11 +4,11 @@
     <item
         android:id="@+id/live_news_fragment"
         android:icon="@drawable/live_news_icon"
-        android:title="All News"/>
+        android:title="@string/all_news"/>
 
     <item
         android:id="@+id/TopStories_news_fragment"
-        android:icon="@drawable/history_news_icon"
-        android:title="Top Stories"/>
+        android:icon="@drawable/top_icon"
+        android:title="@string/top_stories"/>
 
 </menu>

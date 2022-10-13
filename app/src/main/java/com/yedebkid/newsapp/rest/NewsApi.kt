@@ -1,6 +1,7 @@
 package com.yedebkid.newsapp.rest
 
 import com.yedebkid.newsapp.model.DataX
+import com.yedebkid.newsapp.model.TopStoriesNewsItem
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -12,14 +13,14 @@ interface NewsApi {
         @Query("api_token") accesskey: String = ACCESS_KEY,
         @Query("language") language: String = LANGUAGE,
         @Query("limit") limit: Int = LIMIT
-    ): Response<List<DataX>>
+    ): Response<TopStoriesNewsItem>
 
     @GET(TOP_STORIES)
     suspend fun getTopStoriesNews(
         @Query("api_token") accesskey: String = ACCESS_KEY,
         @Query("language") language: String = LANGUAGE,
         @Query("limit") limit: Int = LIMIT
-    ): Response<List<DataX>>
+    ): Response<TopStoriesNewsItem>
 
     /**
      * Top Stories: https://api.thenewsapi.com/v1/news/top?api_token=7KpjzdkqpoavUd2jXc72kCP2OCREnDyDOb1kcL8F&locale=us&limit=3

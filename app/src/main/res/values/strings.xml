@@ -8,4 +8,6 @@
     <string name="historic_news">Historic News</string>
     <string name="news_source">News Source</string>
     <string name="live_news">Live News</string>
+    <string name="all_news">All News</string>
+    <string name="top_stories">Top Stories</string>
 </resources>

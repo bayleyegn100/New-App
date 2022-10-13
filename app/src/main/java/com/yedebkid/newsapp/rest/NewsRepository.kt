@@ -26,7 +26,7 @@ class NewsRepositoryImplementation @Inject constructor(
             val response = newsApi.getAllNews()
             if (response.isSuccessful){
                  response.body()?.let {
-                     emit(UIState.SUCCESS(it.mapToNewsItemDomain()))
+                     emit(UIState.SUCCESS(it.data.mapToNewsItemDomain()))
                  } ?: throw NullResponseException("Response is Null.")
             } else {
                 throw FailureResponseException(response.errorBody().toString())
@@ -45,7 +45,7 @@ class NewsRepositoryImplementation @Inject constructor(
             val response = newsApi.getTopStoriesNews()
             if(response.isSuccessful){
                 response.body()?.let {
-                    emit(UIState.SUCCESS(it.mapToNewsItemDomain()))
+                    emit(UIState.SUCCESS(it.data.mapToNewsItemDomain()))
                 } ?: throw NullResponseException("Response is null.")
             } else {
                 throw FailureResponseException(response.errorBody().toString())

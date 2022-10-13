@@ -28,6 +28,7 @@ class NewsViewModel @Inject constructor(
 
     init {
         getLiveNewsOnly()
+        getTopStoryNewsONly()
     }
 
     private fun getLiveNewsOnly() {
