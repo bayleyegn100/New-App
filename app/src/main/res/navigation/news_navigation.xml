@@ -10,6 +10,9 @@
         android:name="com.yedebkid.newsapp.view.AllNewsFragment"
         android:label="Live News"
         tools:layout="@layout/fragment_all_news" >
+        <action
+            android:id="@+id/action_live_news_fragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
     </fragment>
 
     <fragment
@@ -17,6 +20,14 @@
         android:name="com.yedebkid.newsapp.view.TopStoriesNewsFragment"
         android:label="Top Story News"
         tools:layout="@layout/fragment_top_stories_news" >
+        <action
+            android:id="@+id/action_TopStories_news_fragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.yedebkid.newsapp.view.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" />
 
 </navigation>
