@@ -27,7 +27,7 @@
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.yedebkid.newsapp.view.DetailsFragment"
-        android:label="fragment_details"
+        android:label="Detail News"
         tools:layout="@layout/fragment_details" />
 
 </navigation>

@@ -34,7 +34,7 @@ class TopStoriesNewsFragment : BaseFragment() {
                 is ClicksHandler.NewsDetailsClick -> {
                     newsViewModel.newsItemDomainData = it.news
                     findNavController().navigate(
-                        R.id.action_live_news_fragment_to_detailsFragment
+                        R.id.action_TopStories_news_fragment_to_detailsFragment
                     )
                 }
             }
