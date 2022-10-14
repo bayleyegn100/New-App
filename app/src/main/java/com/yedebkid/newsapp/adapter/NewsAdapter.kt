@@ -57,5 +57,9 @@ class NewsViewHolder(
             .error(R.drawable.ic_baseline_broken_image_24)
             .into(binding.newsImage)
 
+        binding.root.setOnClickListener {
+            onClickHandler(ClicksHandler.NewsDetailsClick(news))
+        }
+
     }
 }
